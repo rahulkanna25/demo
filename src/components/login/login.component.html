@@ -1,0 +1,33 @@
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <!-- Login Form -->
+        <div class="col-md-5">
+            <h3 class="text-center">Login</h3>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Email or Username</label>
+                    <input type="text" id="loginEmail" name="loginEmail" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" class="form-control" required>
+                </div>
+                <button type="submit" (click)="navigate()" class="btn btn-primary w-100">Login</button>
+            </form>
+        </div>
+ 
+       
+ 
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const loginData = {
+            emailOrUsername: document.getElementById('loginEmail').value,
+            password: document.getElementById('loginPassword').value,
+        };
+        console.log('Login Data:', loginData);
+        // Add your backend API call here.
+    });
+ 
+   
+</script>
